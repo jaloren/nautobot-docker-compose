@@ -1002,7 +1002,7 @@ wheels = [
 [[package]]
 name = "nautobot-docker-compose"
 version = "0.1.1"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "nautobot" },
 ]

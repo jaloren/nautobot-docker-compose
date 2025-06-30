@@ -1,17 +1,20 @@
-[project]
+[tool.poetry]
 name = "nautobot-docker-compose"
 version = "0.1.1"
 description = ""
-authors = [{ name = "John Doe", email = "johndoe@mail.com" }]
-requires-python = ">=3.9,<3.13"
-dependencies = ["nautobot==2.3.6"]
+authors = ["John Doe <johndoe@mail.com>"]
 
-[dependency-groups]
-dev = [
-    "invoke",
-    "toml",
-]
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+nautobot = "2.3.6"
+
+# nautobot-example-plugin = {path = "plugins/plugin_example", develop = true}
+
+
+[tool.poetry.dev-dependencies]
+invoke = "*"
+toml = "*"
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
