@@ -27,6 +27,7 @@ COPY ../plugins /source/plugins
 
 # Install the nautobot project to include Nautobot
 RUN cd /source && \
+    poetry add nautobot@${NAUTOBOT_VERSION} && \
     poetry install --no-interaction --no-ansi && \
     mkdir /tmp/dist && \
     poetry export --without-hashes -o /tmp/dist/requirements.txt

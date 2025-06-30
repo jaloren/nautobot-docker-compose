@@ -42,3 +42,5 @@ PLUGINS = []
 PLUGINS_CONFIG = {
     "nautobot_example_plugin": {},
 }
+
+INSTALLATION_METRICS_ENABLED = False
