@@ -35,7 +35,19 @@ CACHEOPS_REDIS = parse_redis_connection(redis_database=1)
 
 # Enable installed plugins. Add the name of each plugin to the list.
 # PLUGINS = ["nautobot_example_plugin"]
-PLUGINS = []
+PLUGINS = [
+    'nautobot_ssot',
+    'nautobot_floor_plan',
+    'nautobot_data_validation_engine',
+    'nautobot_bgp_models',
+    'nautobot_design_builder',
+    'nautobot_plugin_nornir',
+    'nautobot_golden_config',
+    'nautobot_device_lifecycle_mgmt',
+    'nautobot_device_onboarding',
+    'welcome_wizard',
+    'nautobot_secrets_providers'
+]
 
 # Plugins configuration settings. These settings are used by various plugins that the user may have installed.
 # Each key in the dictionary is the name of an installed plugin and its value is a dictionary of settings.

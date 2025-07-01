@@ -1,5 +1,5 @@
-ARG NAUTOBOT_VERSION
-ARG PYTHON_VER
+ARG NAUTOBOT_VERSION=2.4.10
+ARG PYTHON_VER=2.4.10
 FROM ghcr.io/nautobot/nautobot:${NAUTOBOT_VERSION}-py${PYTHON_VER} as nautobot-base
 
 USER 0
@@ -27,7 +27,6 @@ COPY ../plugins /source/plugins
 
 # Install the nautobot project to include Nautobot
 RUN cd /source && \
-    poetry add nautobot@${NAUTOBOT_VERSION} && \
     poetry install --no-interaction --no-ansi && \
     mkdir /tmp/dist && \
     poetry export --without-hashes -o /tmp/dist/requirements.txt
